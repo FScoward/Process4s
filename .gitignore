@@ -12,3 +12,6 @@ build
 target/
 testdata/debugger
 .idea
+elasticsearch*
+kibana*
+process.log
