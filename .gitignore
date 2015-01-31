@@ -14,4 +14,4 @@ testdata/debugger
 .idea
 elasticsearch*
 kibana*
-process.log
+process*.log

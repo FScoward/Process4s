@@ -16,7 +16,7 @@ object Main {
     
     // アクティブウィンドウを取得し、何を作業記録を行う
     val LOGGER = LoggerFactory.getLogger(this.getClass)
-    val term = 5
+    val term = 1
     
     while(true){
       

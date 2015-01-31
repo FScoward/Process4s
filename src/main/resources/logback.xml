@@ -7,9 +7,16 @@
 
     <!--<logger name="chapters.configuration" level="INFO"/>-->
 
-    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>process.log</file>
         <append>true</append>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>process.%d{yyyy-MM-dd}.log</fileNamePattern>
+
+            <!-- keep 30 days worth of history -->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
         <encoder>
             <charset>UTF-8</charset>
             <pattern>%d{yyyy/MM/dd HH:mm:ss}, %-5level, %msg%n</pattern>
